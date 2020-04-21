@@ -28,6 +28,6 @@ jobs:
     - name: 'Deploy to Azure Web App'
       uses: azure/webapps-deploy@v1
       with:
-        app-name: 'intelliprop-api'
+        app-name: 'intellipropAPI'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_0f666ff061bb4c97bc96eeb80e469b7d }}

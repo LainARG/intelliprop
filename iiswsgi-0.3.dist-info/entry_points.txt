@@ -1,0 +1,36 @@
+[console_scripts]
+iiswsgi = iiswsgi.server:run
+iiswsgi_install = iiswsgi.install_msdeploy:install_console
+iiswsgi_install_fcgi_app = iiswsgi.fcgi:install_fcgi_app_console
+
+[distutils.commands]
+bdist_msdeploy = iiswsgi.bdist_msdeploy:bdist_msdeploy
+bdist_webpi = iiswsgi.bdist_webpi:bdist_webpi
+build_msdeploy = iiswsgi.build_msdeploy:build_msdeploy
+clean_webpi = iiswsgi.clean_webpi:clean_webpi
+install_msdeploy = iiswsgi.install_msdeploy:install_msdeploy
+test_msdeploy = iiswsgi.test_msdeploy:test_msdeploy
+
+[distutils.setup_keywords]
+author_url = iiswsgi.options:assert_string
+discovery_file = iiswsgi.options:assert_string
+display_url = iiswsgi.options:assert_string
+help_url = iiswsgi.options:assert_string
+icon_url = iiswsgi.options:assert_string
+install_msdeploy = iiswsgi.options:assert_list
+install_webpi = iiswsgi.options:assert_list
+license_url = iiswsgi.options:assert_string
+msdeploy_url_template = iiswsgi.options:assert_string
+published = iiswsgi.options:assert_string
+screenshot_url = iiswsgi.options:assert_string
+title = iiswsgi.options:assert_string
+
+[paste.app_factory]
+test_app = iiswsgi.server:make_test_app
+
+[paste.server_factory]
+iis = iiswsgi.server:server_factory
+
+[paste.server_runner]
+iis = iiswsgi.server:server_runner
+

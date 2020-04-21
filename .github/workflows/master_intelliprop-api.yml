@@ -30,4 +30,4 @@ jobs:
       with:
         app-name: 'intelliprop-api'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_0f666ff061bb4c97bc96eeb80e469b7d }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_f785f739b9ff4f749fdb47ad4de7dfbe }}
